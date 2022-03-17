@@ -42,7 +42,8 @@ To make this change here is some of the code that was changed to speed the code 
 
 
 Summary:
-	Question 1): One of the main advantages of refactoring code is that it can speed up the time it takes to run said code.  If you have a large data set these small changes could net seconds if not minutes off of the time it takes to compile the results.  This in mind a disadvantage is that you could spend hours to have a small return in time it takes to compile the results.  The other disadvantage I can think of is that you could end up “breaking” your code and have to troubleshoot and debug these new lines of code.
+	
+Question 1): One of the main advantages of refactoring code is that it can speed up the time it takes to run said code.  If you have a large data set these small changes could net seconds if not minutes off of the time it takes to compile the results.  This in mind a disadvantage is that you could spend hours to have a small return in time it takes to compile the results.  The other disadvantage I can think of is that you could end up “breaking” your code and have to troubleshoot and debug these new lines of code.
 	
 Question 2): As mentioned above the time it could take to refactor the code could take more time than it would to leave the code as is.  As we saw with this example both codes were originally running at about .6 seconds but after refactoring the code took about .55 seconds to complete.  To have .05 hundredths of a second saved is not detectable by a human unless you have a timer running as we had.
 But if you are working with a very large data set you could potentially save minutes if not hours of compiling time when you refactor the code.
