@@ -6,17 +6,20 @@ Overview of Project:
 Results:
 	In 2017 all but one stock came back with positive returns, the stock that failed to yield was TERP. ![This is an image](https://github.com/BMoreland20/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2017_Results.png)  Where as in 2018 all but two failed to make a positive return those being ENPH and RUN. ![This is an image](https://github.com/BMoreland20/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2018_Results.png)  To perform this analysis we first have to create code to automatically perform the required analysis quicker than we could manually.  After setting up the array and listing all of the variable we need to build the 'For' loop and multiple 'If' 'Then' statements for pull from the total volume and look at the starting and ending prices to determine our return.  Here is some examples of the code needed to run these loops:
   
-'For j = 2 To RowCount’ 
-‘If Cells(j, 1).Value = ticker Then  
+`For j = 2 To RowCount`
+
+`If Cells(j, 1).Value = ticker Then  
 totalVolume = totalVolume + Cells(j, 8).Value 
-End If' 
-'If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then 
+End If`
+
+`If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then 
 startingPrice = Cells(j, 6).Value
-End If'
-'If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
+End If`
+
+`If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
  	endingPrice = Cells(j, 6).Value
-End If’
-‘Next j'.  
+End If
+Next j`  
 
 These lines of code allow us to automate the process of analyzing the returns of the stocks.  With this addition of formatting code we can quickly format the results to show which had a positive yield vs a negative yield.  However, this code in total ran slowly at about .6 seconds for both years (see images). ![This is an image](https://github.com/BMoreland20/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2017_Original.png) 
 ![This is an image](https://github.com/BMoreland20/Stocks-Analysis/blob/main/Resources/VBA_Challenge_2018_Original.png)
@@ -27,15 +30,15 @@ This refactoring saved some time but not much by bringing the time down to rough
 
 To make this change here is some of the code that was changed to speed the code up.
 
-‘ tickerIndex = 0’
+`tickerIndex = 0`
 
-‘Dim tickerVolumes(12) As Long’
-‘Dim tickerStartingPrices(12) As Single’
-‘Dim tickerEndingPrices(12) As Single’
+`Dim tickerVolumes(12) As Long`
+`Dim tickerStartingPrices(12) As Single`
+`Dim tickerEndingPrices(12) As Single`
     
-    ‘For i = 0 To 11
+    `For i = 0 To 11
         tickerVolumes(i) = 0
-    Next I’
+    Next I`
 
 
 Summary:
