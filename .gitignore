@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+green_stocks.xlsm
+README.txt
+VBA_Challenge_Complete.vbs
